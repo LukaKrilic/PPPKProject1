@@ -9,7 +9,7 @@ namespace MedicalApp.Model
 {
     internal class Doctor
     {
-        public long id { get; set; }
+        public long Id { get; set; }
 
         [MaxLength(50)]
         public required string Ime { get; set; }

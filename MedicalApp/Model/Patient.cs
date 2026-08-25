@@ -21,7 +21,7 @@ namespace MedicalApp.Model
 
         public required string Spol { get; set; }
 
-        public string? AdresaBorovista { get; set; }
+        public string? AdresaBoravista { get; set; }
         public string? AdresaPrebivalista { get; set; }
 
         public DateTimeOffset CreatedAt { get; set; }
