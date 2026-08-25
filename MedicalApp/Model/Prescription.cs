@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MedicalApp.Model
 {
-    internal class Prescription
+    public class Prescription
     {
         public long Id { get; set; }
         public decimal Doza { get; set; }

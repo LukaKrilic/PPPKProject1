@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MedicalApp.Model
 {
-    internal class Patient
+    public class Patient
     {
         public long Id { get; set; }
         [MaxLength(50)]

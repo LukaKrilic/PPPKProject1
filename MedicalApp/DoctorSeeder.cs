@@ -12,8 +12,8 @@ namespace MedicalApp
     {
         public static void FirstRun(MedicalDbContext db) 
         {
-            Console.WriteLine("=== Prvo pokretanje: unos lijecnika ===");
-            Console.WriteLine("(Nakon ovog koraka dodavanje lijecnika vise NIJE moguce!)");
+            Console.WriteLine("=== Prvo pokretanje: unos Doktora ===");
+            Console.WriteLine("(Nakon ovog koraka dodavanje doktora vise NIJE moguce!)");
             Console.WriteLine();
 
             while(true)
@@ -25,7 +25,7 @@ namespace MedicalApp
                 {
                     if (!db.Doctors.Any())
                     {
-                        Console.WriteLine("Morate unijeti barem jednog lijecnika! \n");
+                        Console.WriteLine("Morate unijeti barem jednog doktora! \n");
                         continue;
                     }
                     break;
@@ -50,11 +50,11 @@ namespace MedicalApp
                     Specijalizacija = specijalizacija.Trim()
                 });
 
-                Console.WriteLine($"Lijecnik {ime} {prezime} ({specijalizacija}) je dodan. \n");
+                Console.WriteLine($"Doktor {ime} {prezime} ({specijalizacija}) je dodan. \n");
                 db.SaveChanges();
             }
             
-            Console.WriteLine($"=== Unos lijecnika({db.Doctors.Count()}) zavrsen ===\n");
+            Console.WriteLine($"=== Unos doktora({db.Doctors.Count()}) zavrsen ===\n");
         }
     }
 }

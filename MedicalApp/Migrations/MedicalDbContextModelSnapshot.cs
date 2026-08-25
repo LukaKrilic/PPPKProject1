@@ -32,6 +32,7 @@ namespace MedicalApp.Migrations
                         .HasColumnType("bigint");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
                     b.Property<string>("Ime")
                         .IsRequired()
                         .HasMaxLength(50)
