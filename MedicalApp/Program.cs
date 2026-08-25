@@ -1,5 +1,7 @@
-﻿using Npgsql;
+﻿using MedicalApp.Data;
+using Microsoft.EntityFrameworkCore;
 
-using var conn = new NpgsqlConnection("Host=localhost;Username=user;Password=password;Database=medicaldb");
-conn.Open();
-Console.WriteLine(new NpgsqlCommand("SELECT version()", conn).ExecuteScalar());
+using var db = new MedicalDbContext();
+db.Database.Migrate();
+
+Console.WriteLine("Baza je spremna.");
