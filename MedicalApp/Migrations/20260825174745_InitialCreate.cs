@@ -16,7 +16,7 @@ namespace MedicalApp.Migrations
                 name: "Doctors",
                 columns: table => new
                 {
-                    id = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Ime = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     Prezime = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
@@ -24,7 +24,7 @@ namespace MedicalApp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Doctors", x => x.id);
+                    table.PrimaryKey("PK_Doctors", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -52,7 +52,7 @@ namespace MedicalApp.Migrations
                     Oib = table.Column<string>(type: "char(11)", maxLength: 11, nullable: false),
                     DatumRodjenja = table.Column<DateOnly>(type: "date", nullable: false),
                     Spol = table.Column<string>(type: "char(1)", nullable: false),
-                    AdresaBorovista = table.Column<string>(type: "text", nullable: true),
+                    AdresaBoravista = table.Column<string>(type: "text", nullable: true),
                     AdresaPrebivalista = table.Column<string>(type: "text", nullable: true),
                     CreatedAt = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false, defaultValueSql: "now()")
                 },
