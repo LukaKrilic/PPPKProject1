@@ -19,7 +19,7 @@ namespace MedicalApp.Model
         MAMMO,
         EEG
     }
-    internal class SpecialistExam
+    public class SpecialistExam
     {
         public long Id { get; set; }
 

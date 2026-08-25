@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MedicalApp.Model
 {
-    internal class Patient
+    public class Patient
     {
         public long Id { get; set; }
         [MaxLength(50)]
@@ -21,7 +21,7 @@ namespace MedicalApp.Model
 
         public required string Spol { get; set; }
 
-        public string? AdresaBorovista { get; set; }
+        public string? AdresaBoravista { get; set; }
         public string? AdresaPrebivalista { get; set; }
 
         public DateTimeOffset CreatedAt { get; set; }

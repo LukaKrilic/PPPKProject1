@@ -26,7 +26,7 @@ namespace MedicalApp.Data
             options
                 .UseNpgsql(cs)
                 .UseLazyLoadingProxies()
-                .LogTo(Console.WriteLine, LogLevel.Information)
+                //.LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging();
         }
         protected override void OnModelCreating(ModelBuilder mb) {
