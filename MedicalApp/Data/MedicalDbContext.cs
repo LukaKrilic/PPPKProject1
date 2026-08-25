@@ -18,9 +18,11 @@ namespace MedicalApp.Data
         public DbSet<MedicalHistory> MedicalHistories => Set<MedicalHistory>();
         public DbSet<Prescription> Prescriptions => Set<Prescription>();
 
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             var cs = Environment.GetEnvironmentVariable("MEDICAL_DB_CONNECTION_STRING");
+            if (string.IsNullOrWhiteSpace(cs)) cs = "Host=localhost;Username=user;Password=password;Database=medicaldb";
             options
                 .UseNpgsql(cs)
                 .UseLazyLoadingProxies()
