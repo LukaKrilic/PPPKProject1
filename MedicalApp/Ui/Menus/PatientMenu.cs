@@ -75,6 +75,7 @@ namespace MedicalApp.Ui.Menus
                 $"Adresa boravista [{pacijent.AdresaBoravista}]: ") ?? pacijent.AdresaBoravista;
             pacijent.AdresaPrebivalista = ConsoleInput.Optional(
                 $"Adresa prebivalista [{pacijent.AdresaPrebivalista}]: ") ?? pacijent.AdresaPrebivalista;
+            pacijent.Email = ConsoleInput.Optional($"Email [{pacijent.Email}]: ") ?? pacijent.Email;
 
             var oib = ConsoleInput.Optional($"OIB [{pacijent.Oib}]: ");
             if (oib is not null)
@@ -104,7 +105,8 @@ namespace MedicalApp.Ui.Menus
                 DatumRodjenja = ConsoleInput.ReadDate("Datum rodenja (dd.MM.yyyy): "),
                 Spol = UnesiSpol(),
                 AdresaBoravista = ConsoleInput.Optional("Adresa boravista (neobavezno): "),
-                AdresaPrebivalista = ConsoleInput.Optional("Adresa prebivalista (neobavezno): ")
+                AdresaPrebivalista = ConsoleInput.Optional("Adresa prebivalista (neobavezno): "),
+                Email = ConsoleInput.Optional("Email (neobavezno): ")
             };
 
             _db.Patients.Add(pacijent);
@@ -150,7 +152,7 @@ namespace MedicalApp.Ui.Menus
             foreach (var p in upit)
             {
                 Console.WriteLine($"{p.Id,4} | {p.Prezime} {p.Ime} | {p.Oib} | {p.DatumRodjenja:dd.MM.yyyy} | {p.Spol}");
-                Console.WriteLine($"boravište: {p.AdresaBoravista ?? "-"} | prebivalište: {p.AdresaPrebivalista ?? "-"}");
+                Console.WriteLine($"boravište: {p.AdresaBoravista ?? "-"} | prebivalište: {p.AdresaPrebivalista ?? "-"} | email: {p.Email ?? "-"}");
             }
         }
     }

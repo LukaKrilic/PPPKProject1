@@ -131,7 +131,7 @@ namespace MedicalApp.Migrations
                         name: "FK_SpecialistExams_Doctors_DoctorId",
                         column: x => x.DoctorId,
                         principalTable: "Doctors",
-                        principalColumn: "id",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_SpecialistExams_Patients_PacijentId",

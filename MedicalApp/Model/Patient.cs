@@ -24,6 +24,9 @@ namespace MedicalApp.Model
         public string? AdresaBoravista { get; set; }
         public string? AdresaPrebivalista { get; set; }
 
+        [MaxLength(150)]
+        public string? Email { get; set; }
+
         public DateTimeOffset CreatedAt { get; set; }
     }
 }

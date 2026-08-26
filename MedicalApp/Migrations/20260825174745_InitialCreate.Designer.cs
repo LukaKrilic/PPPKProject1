@@ -30,11 +30,11 @@ namespace MedicalApp.Migrations
 
             modelBuilder.Entity("MedicalApp.Model.Doctor", b =>
                 {
-                    b.Property<long>("id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Ime")
                         .IsRequired()
@@ -51,7 +51,7 @@ namespace MedicalApp.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Doctors");
                 });
@@ -116,7 +116,7 @@ namespace MedicalApp.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("AdresaBorovista")
+                    b.Property<string>("AdresaBoravista")
                         .HasColumnType("text");
 
                     b.Property<string>("AdresaPrebivalista")
