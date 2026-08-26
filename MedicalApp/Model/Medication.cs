@@ -16,6 +16,5 @@ namespace MedicalApp.Model
         [MaxLength(50)]
         public required string Oblik { get; set; }
 
-        public virtual ICollection<Prescription> Recepti { get; set; } = [];
     }
 }

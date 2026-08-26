@@ -27,9 +27,9 @@ namespace MedicalApp.Model
         public DateTime DatumPregleda { get; set; }
 
         public long PacijentId { get; set; }
-        public virtual Patient Pacijent { get; set; } = null!;
+        public Patient Pacijent { get; set; } = null!;
 
         public long DoctorId { get; set; }
-        public virtual Doctor Doktor { get; set; } = null!;
+        public Doctor Doktor { get; set; } = null!;
     }
 }

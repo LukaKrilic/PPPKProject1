@@ -18,6 +18,5 @@ namespace MedicalApp.Model
         [MaxLength(100)]
         public required string Specijalizacija { get; set; }
 
-        public virtual ICollection<SpecialistExam> Pregledi { get; set; } = [];
     }
 }

@@ -25,8 +25,7 @@ namespace MedicalApp.Data
             if (string.IsNullOrWhiteSpace(cs)) cs = "Host=localhost;Username=user;Password=password;Database=medicaldb";
             options
                 .UseNpgsql(cs)
-                .UseLazyLoadingProxies()
-                //.LogTo(Console.WriteLine, LogLevel.Information)
+                .LogTo(Console.WriteLine, LogLevel.Information)
                 .EnableSensitiveDataLogging();
         }
         protected override void OnModelCreating(ModelBuilder mb) {

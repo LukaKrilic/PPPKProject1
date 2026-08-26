@@ -17,6 +17,6 @@ namespace MedicalApp.Model
         public DateOnly? DatumDo { get; set; }
 
         public long PacijentId { get; set; }
-        public virtual Patient Pacijent { get; set; } = null!;
+        public Patient Pacijent { get; set; } = null!;  
     }
 }

@@ -25,9 +25,5 @@ namespace MedicalApp.Model
         public string? AdresaPrebivalista { get; set; }
 
         public DateTimeOffset CreatedAt { get; set; }
-
-        public virtual ICollection<MedicalHistory> Povijest { get; set; } = [];
-        public virtual ICollection<Prescription> Recepti { get; set; } = [];
-        public virtual ICollection<SpecialistExam> Pregledi { get; set; } = [];
     }
 }
