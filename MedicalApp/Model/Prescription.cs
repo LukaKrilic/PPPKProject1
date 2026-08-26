@@ -20,9 +20,9 @@ namespace MedicalApp.Model
         public required string ZaStanje { get; set; }
 
         public long PacijentId { get; set; }
-        public virtual Patient Pacijent { get; set; } = null!;
+        public Patient Pacijent { get; set; } = null!;
 
         public long MedicationId { get; set; }
-        public virtual Medication Lijek { get; set; } = null!;
+        public Medication Lijek { get; set; } = null!;
     }
 }
