@@ -22,7 +22,6 @@ namespace MedicalApp.Data
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             var cs = Environment.GetEnvironmentVariable("MEDICAL_DB_CONNECTION_STRING");
-            if (string.IsNullOrWhiteSpace(cs)) cs = "Host=localhost;Username=user;Password=password;Database=medicaldb";
             options
                 .UseNpgsql(cs)
                 .LogTo(Console.WriteLine, LogLevel.Information)
